@@ -1,12 +1,64 @@
+
+section {
+    min-height: 100vh;
+}
+
 #home-l {
     background: url("images/home_coog.jpg") no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 #home-r {
     background: url("images/home_paper.jpg") no-repeat;
     background-size: cover;
-    min-width: 100vh;
+    /* min-width: 100vh; */
 }
 
+/*navigation arrow */
+
+          #arrow-buttons {
+            position: fixed;
+            top: 85%;
+            right: 5%;
+            transform: translateY(-50%);
+            z-index: 1;
+          }
+      
+          .arrow-button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 24px;
+            height: 160px;
+            margin: 0 8px;
+            outline: none;
+            width: 160px;
+          }
+
+          .arrow-button:hover {
+            transform: scale(.5);
+            animation: pulse 0.9s infinite;
+          }
+
+    @keyframes pulse {
+      from {
+        transform: scale(1);
+        }
+        to {
+        transform: scale(1.2);
+      }
+    }
+
+    .arrow-button svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    .arrow-button svg path {
+      fill: #c8102e;
+    }
+
+/* arrow end */
