@@ -1,0 +1,12 @@
+#home-l {
+    background: url("images/home_coog.jpg") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#home-r {
+    background: url("images/home_paper.jpg") no-repeat;
+    background-size: cover;
+    min-width: 100vh;
+}
+
