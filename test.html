@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Source Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    h1 {
+      margin-top: 100vh; /* push content below viewport */
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Source Page</h1>
+  <p><a href="target.html" class="smooth-scroll">Go to target page</a></p>
+  <script>
+    const link = document.querySelector('.smooth-scroll');
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
