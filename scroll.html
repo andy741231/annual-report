@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrolling Page</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 5000px;
+  height: 5000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 50vw;
+  height: 50vh;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.nav-button.up {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-button.down {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-button.left {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="section" style="background-color: #FFC0CB;">Section 1</div>
+        <div class="section" style="background-color: #FFFF00;">Section 2</div>
+        <div class="section" style="background-color: #00FF00;">Section 3</div>
+        <div class="section" style="background-color: #00FFFF;">Section 4</div>
+        <div class="section" style="background-color: #0000FF;">Section 5</div>
+        <div class="section" style="background-color: #FF00FF;">Section 6</div>
+        <div class="section" style="background-color: #FFC0CB;">Section 7</div>
+        <div class="section" style="background-color: #FFFF00;">Section 8</div>
+        <div class="section" style="background-color: #00FF00;">Section 9</div>
+        <div class="section" style="background-color: #00FFFF;">Section 10</div>
+        <div class="section" style="background-color: #0000FF;">Section 11</div>
+        <div class="section" style="background-color: #FF00FF;">Section 12</div>
+      </div>
+    </div>
+    <div class="nav-button up" onclick="scrollUp()">&#8593;</div>
+    <div class="nav-button down" onclick="scrollDown()">&#8595;</div>
+    <div class="nav-button left" onclick="scrollLeft()">&#8592;</div>
+    <div class="nav-button right" onclick="scrollRight()">&#8594;</div>
+    <script>
+        const container = document.querySelector('.container');
+const navButtons = document.querySelectorAll('.nav-button');
+
+let scrollX = 0;
+let scrollY = 0;
+
+// Function to handle scrolling of the page
+function scrollPage(x, y) {
+  container.scrollTo({
+    left: x,
+    top: y,
+    behavior: 'smooth'
+  });
+}
+
+// Add event listeners to the navigation buttons
+navButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('up')) {
+      scrollY -= 500;
+    } else if (button.classList.contains('down')) {
+      scrollY += 500;
+    } else if (button.classList.contains('left')) {
+      scrollX -= 500;
+    } else if (button.classList.contains('right')) {
+      scrollX += 500;
+    }
+    scrollPage(scrollX, scrollY);
+  });
+});
+
+// Add event listener for arrow keys
+document.addEventListener('keydown', event => {
+  if (event.keyCode === 37) { // Left arrow
+    scrollX -= 500;
+  } else if (event.keyCode === 38) { // Up arrow
+    scrollY -= 500;
+  } else if (event.keyCode === 39) { // Right arrow
+    scrollX += 500;
+  } else if (event.keyCode === 40) { // Down arrow
+    scrollY += 500;
+  }
+  scrollPage(scrollX, scrollY);
+});
+
+</script>
+  </body>
+</html>

@@ -25,10 +25,10 @@
       
         <section class="bg-dark" id="1">
             <div class="row col-md-12">
-                <div class="col-md-3 col-sm" id="home-l">
+                <div class="col-md-3 col-sm lazy" data-bg="images/home_coog.jpg" id="home-l">
                     
                 </div>
-                <div class="col-md-9 col-sm" id="home-r">
+                <div class="col-md-9 col-sm lazy" data-bg="images/home_paper.jpg" id="home-r">
                     <div class="" style="padding: 250px 100px; margin-right:auto; margin-left: auto;">
                         <img  class="img-fluid animate__animated animate__delay-1s animate__fadeIn animate__slow lazy" data-src="images/wordmark.png" alt="">
                     </div>
@@ -564,25 +564,60 @@
           </div>
         </section>
         
-        <section>
-
+        <section class="section-container">
+          <div class="horizontal-section bg-dark">
+            <div class="horizontal-nav-button">
+              <div class="left" onclick="navLeft()">&#8592;</div>
+              <div class="right" onclick="navRight()">&#8594;</div>
+              </div>
+          </div>
+          <div class="horizontal-section bg-light">
+            <div class="horizontal-nav-button">
+              <div class="left" onclick="navLeft()">&#8592;</div>
+              <div class="right" onclick="navRight()">&#8594;</div>
+              </div>
+          </div>
+          <div class="horizontal-section">
+            <div class="horizontal-nav-button">
+          <div class="left" onclick="navLeft()">&#8592;</div>
+          <div class="right" onclick="navRight()">&#8594;</div>
+          </div>
+          </div>
+          <div class="horizontal-section">
+            <div class="horizontal-nav-button">
+          <div class="left" onclick="navLeft()">&#8592;</div>
+          <div class="right" onclick="navRight()">&#8594;</div>
+          </div>
+          </div>
+          <div class="horizontal-section">
+            <div class="horizontal-nav-button">
+          <div class="left" onclick="navLeft()">&#8592;</div>
+          <div class="right" onclick="navRight()">&#8594;</div>
+          </div>
+          </div>
+          
         </section>
 
 
 
-        <div id="arrow-buttons">
-          <button id="left-arrow" class="arrow-button" aria-label="Previous section">
-            <svg viewBox="0 0 24 24">
-              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/>
-            </svg>
-          </button>
-          <button id="right-arrow" class="arrow-button" aria-label="Next section">
-            <svg viewBox="0 0 24 24">
-              <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12l-4.58 4.59z"/>
-            </svg>
-          </button>
-        </div>
-        
+
+
+
+          <button class="arrow-button" id="left-arrow">&lt;</button>
+          <button class="arrow-button" id="right-arrow">&gt;</button>
+
+        <script>
+          // JavaScript for section navigation
+      function navLeft() {
+        const container = document.querySelector(".section-container");
+        container.scrollBy(-window.innerWidth, 0);
+      }
+      
+      function navRight() {
+        const container = document.querySelector(".section-container");
+        container.scrollBy(window.innerWidth, 0);
+      }
+        </script>
         <script src="https://www.uhadvancement.com/app/digital-library/stories/js/owl.carousel.js"></script>
 
         <script>
@@ -608,6 +643,16 @@
             updateIndex('next');
             scrollToSection(index);
           });
+
+          document.addEventListener("keydown", (event) => {
+        if (event.keyCode === 37) {
+          updateIndex('prev');
+            scrollToSection(index);
+        } else if (event.keyCode === 39) {
+          updateIndex('next');
+            scrollToSection(index);
+        }
+      });
 
           // Check if user scrolled to a section away from the sections[index]
           // To handle the case where the user scrolls to a section away from the sections[index],
