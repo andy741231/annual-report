@@ -32,10 +32,10 @@ section {
           button.arrow-button {
             z-index: 1;
             position: fixed;
-            top: 50%;
+            top: 85%;
             transform: translateY(-5%);
             font-size: 2em;
-            padding: 10px;
+            padding: 15px;
             background-color:rgba(3,3,3,.5);
             color: white;
             border: none;
@@ -43,7 +43,7 @@ section {
           }
           
           #left-arrow {
-            left: 0;
+            right: 60;
           }
           #right-arrow {
             right: 0;
@@ -51,7 +51,7 @@ section {
 
           button.arrow-button:hover {
             background-color:#333;
-            /* transform: scale(.1); */
+            transform: scale(.9);
             animation: pulse 0.9s infinite;
           }
 
@@ -60,7 +60,7 @@ section {
         transform: scale(1);
         }
         to {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
 
@@ -272,34 +272,46 @@ p.counter {
     position: relative;
   }
   
-  /* CSS for navigation buttons */
-  .horizontal-nav-button {
+/* CSS for navigation buttons 
+.horizontal-nav-button {
     position: absolute;
-    top: 90%;
-    left: 50%;
+    top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
     background-color: white;
     border: 2px solid black;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     font-size: 1.5em;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
+  } 
+
   
   .horizontal-nav-button:hover {
     background-color: black;
     color: #333;
   }
-  
-  .horizontal-nav-button.left {
+  */
+  .hor-nav {
+    position:absolute;
+    cursor: pointer;
+    background: rgba(255,255,255,0.5);
+  }
+
+  .hor-nav:hover {
+    transform: scale(1.1);
+  }
+.hor-nav.left {
     left: 20px;
+    color: #c8102e;
   }
   
-  .horizontal-nav-button.right {
+.hor-nav.right {
     right: 20px;
+    color: #c8102e;
   }
+  
