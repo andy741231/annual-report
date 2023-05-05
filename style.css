@@ -263,12 +263,9 @@ p.counter {
   .horizontal-section {
     flex-shrink: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 5em;
     position: relative;
   }
   
@@ -300,6 +297,7 @@ p.counter {
     position:absolute;
     cursor: pointer;
     background: rgba(255,255,255,0.5);
+    top: 50%;
   }
 
   .hor-nav:hover {
@@ -308,10 +306,12 @@ p.counter {
 .hor-nav.left {
     left: 20px;
     color: #c8102e;
+    font-size: 2em;
   }
   
 .hor-nav.right {
     right: 20px;
     color: #c8102e;
+    font-size: 2em;
   }
   
