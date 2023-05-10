@@ -315,3 +315,22 @@ p.counter {
     font-size: 2em;
   }
   
+  h1.crimson {
+    font-size: 3em;
+  }
+
+  h1.league {
+    font-size: 3em;
+  }
+
+  @media screen and (max-width: 600px) {
+    h1.crimson {
+      font-size: 2.2em;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    h1.league {
+      font-size: 2.5em;
+    }
+  }

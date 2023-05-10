@@ -232,10 +232,10 @@
         padding: 0;
     }
     .owl-carousel .owl-nav .owl-prev {
-        left: -3.25rem;
+        /* left: -3.25rem; */
     }
     .owl-carousel .owl-nav .owl-next {
-        right: -3.25rem;
+        /* right: -3.25rem; */
     }
     .owl-carousel li:nth-child(n+2) {
         display: block;
