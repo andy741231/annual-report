@@ -87,33 +87,9 @@
             })
           }
 
-          const fadeObs = new IntersectionObserver( animateFade, { threshold: .1 } )
+          const fadeObs = new IntersectionObserver( animateFade, { threshold: 0 } )
           const party = document.querySelectorAll( 'img.party' )
 
           party.forEach(function(partyElement) {
             fadeObs.observe(partyElement)
-          })
-
-          
-          
-
-//testing
-          const test = entries => {
-            entries.forEach( entry => {
-              const testel = entry.target
-              if (entry.isIntersecting && !testel.classList.contains( 'is-visible' )) {
-                testel.classList.remove('visually-hidden')
-                testel.classList.add('animate__animated', 'animate__fadeIn')
-                testel.classList.add( 'is-visible' )
-                console.log(entry.isIntersecting)
-              } else {console.log(entry.isIntersecting)}
-            })
-          }
-          
-          // start animation for stat counter
-          const testio = new IntersectionObserver( test, { threshold: 0 } )
-          const countio = document.querySelectorAll( '.party' )
-          
-          countio.forEach(function(testcount) {
-            testio.observe(testcount);
           })
