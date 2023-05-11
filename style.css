@@ -18,12 +18,10 @@ section {
 }
 
 .coogs-bg {
-    background: url("images/coogs.png") no-repeat;
     background-size: cover;
 }
 
 .book-bg {
-    background: url('images/book-bg.png') no-repeat;
     background-size: cover; 
 }
 
@@ -71,7 +69,6 @@ section {
 }
 
 .bg-life {
-  background-image: url('images/life-members.png');
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -79,7 +76,6 @@ section {
 }
 
 .bg-life-2 {
-  background-image: url('images/life-members-2.png');
   background-repeat: no-repeat;
   background-size:cover;
   min-height: 100vh;
@@ -87,14 +83,12 @@ section {
 }
 
 .bg-over {
-  background-image: url('images/over.png');
   background-repeat: no-repeat;
   background-size:cover;
   height:100vh ;
 }
 
 .bg-enjoy {
-  background-image: url('images/enjoy.png');
   background-repeat: no-repeat;
   background-size:cover;
   background-position: top;
@@ -102,7 +96,6 @@ section {
 }
 
 .bg-over-700 {
-  background-image: url('images/over-700.png');
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
@@ -328,9 +321,14 @@ p.counter {
       font-size: 2.2em;
     }
   }
+  @media screen and (max-width: 1214px) {
+    h1.league {
+      font-size: 2.2em;
+    }
+  }
 
   @media screen and (max-width: 600px) {
     h1.league {
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
