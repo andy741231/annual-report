@@ -88,7 +88,7 @@
           }
 
           const fadeObs = new IntersectionObserver( animateFade, { threshold: 0 } )
-          const party = document.querySelectorAll( 'img.party' )
+          const party = document.querySelectorAll( '.party' )
 
           party.forEach(function(partyElement) {
             fadeObs.observe(partyElement)
