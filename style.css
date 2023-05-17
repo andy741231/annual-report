@@ -1,6 +1,6 @@
 body {
     font-size: 28px;
-    max-width: 1920px;
+    max-width: 1600px;
     background-color: #333;
     margin-right: auto;
     margin-left: auto;
@@ -38,21 +38,28 @@ section {
             transform: translateY(-5%);
             font-size: 2em;
             padding: 15px;
-            background-color:rgba(3,3,3,.5);
+            background-color:rgba(3,3,3,.2);
             color: white;
             border: none;
             cursor: pointer;
           }
           
           #left-arrow {
-            right: 60;
+            right: 90;
           }
           #right-arrow {
             right: 0;
           }
 
+          #up-arrow {
+            right: 90;
+          }
+          #down-arrow {
+            right: 0;
+          }
+
           button.arrow-button:hover {
-            background-color:#333;
+            background-color:rgba(3,3,3,.3);
             transform: scale(.9);
             animation: pulse 0.9s infinite;
           }
@@ -260,6 +267,7 @@ p.counter {
   .horizontal-section {
     flex-shrink: 0;
     width: 100vw;
+    max-width: 1600px;
     min-height: 100vh;
     scroll-snap-align: start;
     align-items: center;

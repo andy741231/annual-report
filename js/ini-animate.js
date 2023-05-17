@@ -1,3 +1,21 @@
+          
+          const maxSectionWidth = 1600
+          let realSectionWidth
+          if (window.innerWidth >= maxSectionWidth) {
+             realSectionWidth = maxSectionWidth
+          } else {
+             realSectionWidth = window.innerWidth
+          }
+
+          function navLeft() {
+            const container = document.querySelector(".section-container");
+            container.scrollBy(-realSectionWidth, 0);
+          }
+
+          function navRight() {
+            const container = document.querySelector(".section-container");
+            container.scrollBy(realSectionWidth, 0);
+          }
 
           const sections = document.querySelectorAll('section')
           let index = 0
@@ -13,6 +31,8 @@
           }
           const prevButton = document.querySelector('#left-arrow')
           const nextButton = document.querySelector('#right-arrow')
+          const upButton = document.querySelector('#up-arrow')
+          const downButton = document.querySelector('#down-arrow')
           prevButton.addEventListener('click', () => {
             updateIndex('prev')
             scrollToSection(index)
@@ -21,6 +41,9 @@
             updateIndex('next')
             scrollToSection(index)
           });
+
+          upButton.addEventListener('click', navLeft)
+          downButton.addEventListener('click', navRight)
 
           document.addEventListener("keydown", (event) => {
         if (event.key === "ArrowUp") {
@@ -59,7 +82,6 @@
                   delay: 15,
                 } )
                 el.classList.add( 'is-visible' )
-                console.log(entry.isIntersecting)
               }
             } )
           }
@@ -82,8 +104,7 @@
                 fadeEl.classList.remove('visually-hidden')
                 fadeEl.classList.add('animate__animated', 'animate__fadeIn')
                 fadeEl.classList.add( 'is-visible' )
-                console.log(entry.isIntersecting)
-              } else {console.log(entry.isIntersecting)}
+              }
             })
           }
 
@@ -93,3 +114,139 @@
           party.forEach(function(partyElement) {
             fadeObs.observe(partyElement)
           })
+
+          //horizontal scroll div
+          
+
+          const horScrollStart = entries => {
+            entries.forEach( entry => {
+              let scrollEl = entry.target
+              
+              if (entry.isIntersecting && scrollEl.classList.contains( 'start' ) ) {
+              
+                upButton.classList.remove( 'd-none' )
+                downButton.classList.remove( 'd-none' )
+                prevButton.classList.remove( 'd-none' )
+                nextButton.classList.remove( 'd-none' )
+
+                upButton.classList.remove( 'd-block' )
+                downButton.classList.remove( 'd-block' )
+                prevButton.classList.remove( 'd-block' )
+                nextButton.classList.remove( 'd-block' )
+
+                upButton.classList.add( 'd-none' )
+                downButton.classList.add( 'd-block' )
+                prevButton.classList.add( 'd-block' )
+                nextButton.classList.add( 'd-none' )
+                console.log('start')
+              } 
+            } )
+          }
+
+          const horScrollMid = entries => {
+            entries.forEach( entry => {
+              let scrollEl = entry.target
+              
+              if (entry.isIntersecting && scrollEl.classList.contains( 'mid' ) ) {
+              
+                upButton.classList.remove( 'd-none' )
+                downButton.classList.remove( 'd-none' )
+                prevButton.classList.remove( 'd-none' )
+                nextButton.classList.remove( 'd-none' )
+
+                upButton.classList.remove( 'd-block' )
+                downButton.classList.remove( 'd-block' )
+                prevButton.classList.remove( 'd-block' )
+                nextButton.classList.remove( 'd-block' )
+
+                upButton.classList.add( 'd-block' )
+                downButton.classList.add( 'd-block' )
+                prevButton.classList.add( 'd-none' )
+                nextButton.classList.add( 'd-none' )
+                console.log('mid')
+              } 
+            } )
+          }
+
+          const horScrollEnd = entries => {
+            entries.forEach( entry => {
+              let scrollEl = entry.target
+              
+              if (entry.isIntersecting && scrollEl.classList.contains( 'end' ) ) {
+              
+                upButton.classList.remove( 'd-none' )
+                downButton.classList.remove( 'd-none' )
+                prevButton.classList.remove( 'd-none' )
+                nextButton.classList.remove( 'd-none' )
+
+                upButton.classList.remove( 'd-block' )
+                downButton.classList.remove( 'd-block' )
+                prevButton.classList.remove( 'd-block' )
+                nextButton.classList.remove( 'd-block' )
+
+                upButton.classList.add( 'd-block' )
+                downButton.classList.add( 'd-none' )
+                prevButton.classList.add( 'd-none' )
+                nextButton.classList.add( 'd-block' )
+                console.log('end')
+              } 
+            } )
+          }
+
+          const clearDiv = (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                
+              } else {
+                upButton.classList.remove( 'd-none' )
+                downButton.classList.remove( 'd-none' )
+                prevButton.classList.remove( 'd-none' )
+                nextButton.classList.remove( 'd-none' )
+
+                upButton.classList.remove( 'd-block' )
+                downButton.classList.remove( 'd-block' )
+                prevButton.classList.remove( 'd-block' )
+                nextButton.classList.remove( 'd-block' )
+
+                upButton.classList.add( 'd-none' )
+                downButton.classList.add( 'd-none' )
+                console.log('clear')
+              }
+            });
+          };
+
+         
+              
+                
+
+               
+                
+          const allDiv = document.querySelectorAll( '.horizontal-section' )
+          const sectionCon = document.querySelector( '.section-container' )
+
+          // start scroll 
+          const startHorScrollIO = new IntersectionObserver( horScrollStart, { threshold: 0.5 } )
+          
+          
+          allDiv.forEach(function(scroll) {
+            startHorScrollIO.observe(scroll);
+          })
+
+          // mid  scroll 
+          const midHorScrollIO = new IntersectionObserver( horScrollMid, { threshold: 0.5 } )
+          
+          allDiv.forEach(function(scroll) {
+            midHorScrollIO.observe(scroll);
+          })
+
+            // end  scroll 
+            const endHorScrollIO = new IntersectionObserver( horScrollEnd, { threshold: 0.5 } )
+          
+            allDiv.forEach(function(scroll) {
+              endHorScrollIO.observe(scroll);
+            })
+
+             // clear  scroll 
+             const clearIO = new IntersectionObserver( clearDiv, { threshold: 0.5 } )
+          
+               clearIO.observe(sectionCon);
