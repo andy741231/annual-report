@@ -36,7 +36,7 @@ section {
             position: fixed;
             top: 85%;
             transform: translateY(-5%);
-            font-size: 2em;
+            font-size: 1.5em;
             padding: 15px;
             background-color:rgba(3,3,3,.2);
             color: white;
@@ -45,14 +45,14 @@ section {
           }
           
           #left-arrow {
-            right: 90;
+            right: 80;
           }
           #right-arrow {
             right: 0;
           }
 
           #up-arrow {
-            right: 90;
+            right: 80;
           }
           #down-arrow {
             right: 0;
@@ -203,7 +203,7 @@ animation-delay:var(--animate-delay-point-8)
 }
 
 p.counter {
-    font-size: 67px;
+    font-size: 60px;
 }
 @media only screen and (max-width: 600px) {
     p.counter {
@@ -362,7 +362,6 @@ p.counter {
     bottom: 0;
     width:100%;
     height:100%;
-    padding:1em;
     font-size: 5em;
     width: 100%;
     color: #fff;
@@ -370,7 +369,9 @@ p.counter {
   }
 
   .overlay-container:hover .overlay-icon {
-  display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
   .overlay-container:hover .img-overlay {

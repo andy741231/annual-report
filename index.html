@@ -357,23 +357,23 @@
         </section>
 
         <section class="bg-light">
-          <div class="row">
-            <div class="col-md-8" id="community">
-              <div class="owl-carousel">
-                <div class="item">
-                  <img class="lazy" data-src="images/comm-1.png">
+          <div class="row full-height">
+            <div class="col-md-8 full-height" id="community">
+              <div class="owl-carousel full-height">
+                <div class="item full-height">
+                  <img class="lazy img-fluid full-height" data-src="images/comm-1.png" style="object-fit: cover;">
                 </div>
                 <div class="item">
-                  <img class="lazy" data-src="images/comm-2.png">
+                  <img class="lazy img-fluid full-height" data-src="images/comm-2.png" style="object-fit: cover;">
                 </div>
                 <div class="item">
-                  <img class="lazy" data-src="images/comm-3.png">
+                  <img class="lazy img-fluid full-height" data-src="images/comm-3.png" style="object-fit: cover;">
                 </div>
                 <div class="item">
-                  <img class="lazy" data-src="images/comm-4.png">
+                  <img class="lazy img-fluid full-height" data-src="images/comm-4.png" style="object-fit: cover;">
                 </div>
                 <div class="item">
-                  <img class="lazy" data-src="images/comm-5.png">
+                  <img class="lazy img-fluid full-height" data-src="images/comm-5.png" style="object-fit: cover;">
                 </div>
               </div>
             </div>
@@ -446,13 +446,13 @@
             <div class="col-md-4 p-5">
               <div class="text-center">
                 <div class="overlay-container">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a href="#">
               <img class="img-hover img-fluid p-5 p-md-2 lazy" data-src="images/aa-1.png">
               <div class="img-overlay">
                 
               </div>
               <div class="overlay-icon">
-                <i class="bi bi-hand-index"></i>
+                <i class="bi bi-globe-americas"></i>
                 </div>
               </a>
               </div>
@@ -463,24 +463,6 @@
               <h3 class="crimson fw-bold counter" style="font-size: 38px; color:#908B8B"><span style="color:#c8102e"> 11</span> Regional<br>
                 Networks</h3>
               </div>
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
             </div>
             <div class="d-flex py-5" style="width:0px;">
@@ -490,16 +472,16 @@
             <div class="col-md-4 p-5">
               <div class="text-center">
                 <div class="overlay-container">
-                  <a href="#">
+                  <a href="#"  data-bs-toggle="modal" data-bs-target="#sharedInterest">
               <img class="img-hover img-fluid p-5 p-md-2 lazy" data-src="images/aa-2.png">
               <div class="img-overlay"></div>
               <div class="overlay-icon">
-                <i class="bi bi-hand-index"></i>
+                <i class="bi bi-people"></i>
                 </div></a>
             </div>
               
               <h1 class="league text-uppercase py-3" style="line-height: 1em;">
-                <span style="color:#c8102e">SHARED INTEREST</span><br>
+                <span style="color:#c8102e">Shared Interest</span><br>
                 <span style="color:#707070">ALUMNI ASSOCIATIONS</span>
               </h1>
               <h3 class="crimson fw-bold counter" style="font-size: 38px; color:#908B8B"><span style="color:#c8102e"> 18</span> Shared Interest<br> 
@@ -507,6 +489,48 @@
               </div>
             </div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="sharedInterest" tabindex="-1" aria-labelledby="sharedInterestLabel" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen" style="max-width:90%; margin-right:auto; margin-left: auto;">
+                <div class="modal-content">
+                  
+                  <div class="modal-body p-0">
+                    <div class="row">
+                      <div class="col-md-6 bg-cougar-yellow p-5 full-height">
+                        <h1 class="league text-uppercase" style="color:#707070"><span style="color:#c8102e">Shared Interest</span> ALUMNI ASSOCIATIONS</h1>
+                        <p class="crimson">Asian Alumni Association<br>
+                          Black Alumni Association<br>
+                          CenterPoint Energy Alumni Association<br>
+                          ComDan Alumni Association<br>
+                          Cougar Athletic Alliance<br>
+                          Delta Upsilon Alumni Association<br>
+                          Energy Alumni Association (Formerly OCEAN)<br>
+                          Eta Lambda Alumni Association<br>
+                          Eta Mu Alumni Association<br>
+                          First Generation Alumni Association<br>
+                          Frontier Fiesta Alumni Association<br>
+                          Graphic Alumni Partnership<br>
+                          Hispanic Alumni Association<br>
+                          LGBTQ Alumni Association<br>
+                          Sigma Nu Alumni Association<br>
+                          Spirit of Houston Alumni Association<br>
+                          Tau Kappa Epsilon Alumni Association<br>
+                          Young Alumni Council</p>
+                      </div>
+                      <div class="col-md-6">
+                        <div>
+                          <img class="img-fluid full-height lazy" data-src="images/share.png" style="object-fit: cover;">
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="d-flex py-5" style="width:0px;">
               <div class="d-none d-md-block" style="border-right: 3px dotted #333; width:0px; padding: 5rem 0px;"></div>
             </div>
@@ -514,11 +538,11 @@
             <div class="col-md-4 p-5">
               <div class="text-center">
                 <div class="overlay-container">
-                  <a href="#">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#collegeBased">
               <img class="img-hover img-fluid p-5 p-md-2 lazy" data-src="images/aa-3.png">
               <div class="img-overlay"></div>
               <div class="overlay-icon">
-                <i class="bi bi-hand-index"></i>
+                <i class="bi bi-mortarboard"></i>
                 </div>
               </a>
             </div>
@@ -531,6 +555,44 @@
                 Networks</h3>
             </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="collegeBased" tabindex="-1" aria-labelledby="collegeBasedLabel" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen" style="max-width:90%; margin-right:auto; margin-left: auto;">
+                <div class="modal-content">
+                  
+                  <div class="modal-body p-0">
+                    <div class="row">
+                      <div class="col-md-6 bg-cougar-yellow p-5 full-height">
+                        <h1 class="league" style="color:#707070"><span style="color:#c8102e">COLLEGE BASED</span> ALUMNI ASSOCIATIONS</h1>
+                        <p class="crimson">Architecture Alumni Association
+                          Bauer College of Business Alumni
+                          Conrad N. Hilton College Alumni Association
+                          Education Alumni Association
+                          Engineering Alumni Association
+                          Graduate College of Social Work Alumni Association
+                          Hobby School of Public Affairs Alumni Association
+                          Masters of Public Administration Alumni Association
+                          Natural Science & Mathematics Alumni Association
+                          Earth & Atmospheric Sciences Alumni Association
+                          Nursing Alumni Association
+                          Technology Alumni Association
+                          Valenti School of Communication Alumni Association</p>
+                      </div>
+                      <div class="col-md-6">
+                        <div>
+                          <img class="img-fluid full-height lazy" data-src="images/college.png" style="object-fit: cover;">
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -640,8 +702,6 @@
                 </div>
               </div>
             </div>
-
-              <div class="hor-nav right" onclick="navRight()">&#8594;</div>
           </div>
 
           <div class="horizontal-section bg-light mid" style="z-index: 0;">
@@ -716,9 +776,6 @@
                   </div>
               </div>
 
-              <div class="hor-nav left" onclick="navLeft()">&#8592;</div>
-              <div class="hor-nav right" onclick="navRight()">&#8594;</div>
-
           </div>
         </div>
           <div class="horizontal-section bg-light end">
@@ -745,10 +802,7 @@
                 <img data-src="images/gala-4.png" style="object-fit: cover;" class="lazy img-fluid">
                 <img data-src="images/gala-5.png" style="object-fit: cover;" class="lazy img-fluid">
               </div>
-            
-              
-            <div class="hor-nav left" onclick="navLeft()">&#8592;</div>
-          </div>
+            </div>
           </div>
           
           
