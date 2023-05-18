@@ -45,17 +45,17 @@ section {
           }
           
           #left-arrow {
-            right: 80;
+            right: 85;
           }
           #right-arrow {
-            right: 0;
+            right: 5;
           }
 
           #up-arrow {
-            right: 80;
+            right: 85;
           }
           #down-arrow {
-            right: 0;
+            right: 5;
           }
 
           button.arrow-button:hover {
@@ -328,11 +328,29 @@ p.counter {
     font-size: 3em;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 576px) {
     h1.crimson {
       font-size: 2.2em;
     }
-  }
+    body {max-width: 100vw;
+    }
+    #left-arrow {
+      right: 195;
+      top: 90%;
+    }
+    #right-arrow {
+      right: 115;
+      top: 90%;
+    }
+
+    #up-arrow {
+      right: 195;
+      top: 90%;
+    }
+    #down-arrow {
+      right: 115;
+      top: 90%;
+    }
   @media screen and (max-width: 1214px) {
     h1.league {
       font-size: 2.2em;
