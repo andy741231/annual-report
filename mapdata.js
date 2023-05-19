@@ -42,11 +42,11 @@ var simplemaps_usmap_mapdata={
     back_image: "no",
     initial_back: "no",
     initial_zoom: -1,
-    initial_zoom_solo: "yes",
+    initial_zoom_solo: "no",
     region_opacity: 1,
     region_hover_opacity: 0.6,
     zoom_out_incrementally: "yes",
-    zoom_percentage: 0.50,
+    zoom_percentage: 0.99,
     zoom_time: 0.5,
     
     //Popup settings
@@ -71,169 +71,220 @@ var simplemaps_usmap_mapdata={
   },
   state_specific: {
     HI: {
-      name: "Hawaii"
+      name: "Hawaii",
+      description: "204"
     },
     AK: {
-      name: "Alaska"
+      name: "Alaska",
+      description: "132"
     },
     FL: {
-      name: "Florida"
+      name: "Florida",
+      description: "3,069"
     },
     NH: {
-      name: "New Hampshire"
+      name: "New Hampshire",
+      description: "125"
     },
     VT: {
-      name: "Vermont"
+      name: "Vermont",
+      description: "63"
     },
     ME: {
-      name: "Maine"
+      name: "Maine",
+      description: "120"
     },
     RI: {
-      name: "Rhode Island"
+      name: "Rhode Island",
+      description: "79"
     },
     NY: {
-      name: "New York"
+      name: "New York",
+      description: "1,718"
     },
     PA: {
-      name: "Pennsylvania"
+      name: "Pennsylvania",
+      description: "1,178"
     },
     NJ: {
-      name: "New Jersey"
+      name: "New Jersey",
+      description: "977"
     },
     DE: {
-      name: "Delaware"
+      name: "Delaware",
+      description: "141"
     },
     MD: {
-      name: "Maryland"
+      name: "Maryland",
+      description: "988"
     },
     VA: {
-      name: "Virginia"
+      name: "Virginia",
+      description: "1,730"
     },
     WV: {
-      name: "West Virginia"
+      name: "West Virginia",
+      description: "98"
     },
     OH: {
-      name: "Ohio"
+      name: "Ohio",
+      description: "974"
     },
     IN: {
-      name: "Indiana"
+      name: "Indiana",
+      description: "214"
     },
     IL: {
-      name: "Illinois"
+      name: "Illinois",
+      description: "1,401"
     },
     CT: {
-      name: "Connecticut"
+      name: "Connecticut",
+      description: "383"
     },
     WI: {
-      name: "Wisconsin"
+      name: "Wisconsin",
+      description: "431"
     },
     NC: {
-      name: "North Carolina"
+      name: "North Carolina",
+      description: "1,406"
     },
     DC: {
-      name: "District of Columbia"
+      name: "District of Columbia",
+      description: "307"
     },
     MA: {
-      name: "Massachusetts"
+      name: "Massachusetts",
+      description: "900"
     },
     TN: {
-      name: "Tennessee"
+      name: "Tennessee",
+      description: "978"
     },
     AR: {
-      name: "Arkansas"
+      name: "Arkansas",
+      description: "652"
     },
     MO: {
-      name: "Missouri"
+      name: "Missouri",
+      description: "804"
     },
     GA: {
-      name: "Georgia"
+      name: "Georgia",
+      description: "1,601"
     },
     SC: {
-      name: "South Carolina"
+      name: "South Carolina",
+      description: "488"
     },
     KY: {
-      name: "Kentucky"
+      name: "Kentucky",
+      description: "318"
     },
     AL: {
-      name: "Alabama"
+      name: "Alabama",
+      description: "594"
     },
     LA: {
-      name: "Louisiana"
+      name: "Louisiana",
+      description: "1,524"
     },
     MS: {
-      name: "Mississippi"
+      name: "Mississippi",
+      description: "319"
     },
     IA: {
-      name: "Iowa"
+      name: "Iowa",
+      description: "243"
     },
     MN: {
-      name: "Minnesota"
+      name: "Minnesota",
+      description: "505"
     },
     OK: {
-      name: "Oklahoma"
+      name: "Oklahoma",
+      description: "908"
     },
     TX: {
-      name: "Texas"
+      name: "Texas",
+      description: "235,663"
     },
     NM: {
-      name: "New Mexico"
+      name: "New Mexico",
+      description: "743"
     },
     KS: {
-      name: "Kansas"
+      name: "Kansas",
+      description: "585"
     },
     NE: {
-      name: "Nebraska"
+      name: "Nebraska",
+      description: "199"
     },
     SD: {
-      name: "South Dakota"
+      name: "South Dakota",
+      description: "73"
     },
     ND: {
-      name: "North Dakota"
+      name: "North Dakota",
+      description: "44"
     },
     WY: {
-      name: "Wyoming"
+      name: "Wyoming",
+      description: "87"
     },
     MT: {
-      name: "Montana"
+      name: "Montana",
+      description: "147"
     },
     CO: {
-      name: "Colorado"
+      name: "Colorado",
+      description: "2534"
     },
     UT: {
-      name: "Utah"
+      name: "Utah",
+      description: "375"
     },
     AZ: {
-      name: "Arizona"
+      name: "Arizona",
+      description: "1,198"
     },
     NV: {
-      name: "Nevada"
+      name: "Nevada",
+      description: "540"
     },
     OR: {
-      name: "Oregon"
+      name: "Oregon",
+      description: "767"
     },
     WA: {
-      name: "Washington"
+      name: "Washington",
+      description: "1694"
     },
     CA: {
-      name: "California"
+      name: "California",
+      description: "6767"
     },
     MI: {
-      name: "Michigan"
+      name: "Michigan",
+      description: "540"
     },
     ID: {
-      name: "Idaho"
+      name: "Idaho",
+      description: "214"
     },
     GU: {
       name: "Guam",
-      hide: "yes"
+      description: "11"
     },
     VI: {
       name: "Virgin Islands",
-      hide: "yes"
+      description: "21"
     },
     PR: {
       name: "Puerto Rico",
-      hide: "yes"
+      description: "64"
     },
     MP: {
       name: "Northern Mariana Islands",
@@ -241,342 +292,72 @@ var simplemaps_usmap_mapdata={
     },
     AS: {
       name: "American Samoa",
-      hide: "yes"
+      description: "1"
     }
   },
   locations: {
     "0": {
       lat: 30.268,
       lng: -97.743,
-      name: "Austin Tx"
+      name: "Austin Tx",
+      description: "<p>Austin Alumni Association</p>\n<img class=\"text-center\" src=\"images/austin.png\">"
     },
     "1": {
       lat: 32.778,
       lng: -96.795,
-      name: "Dallas TX"
+      name: "Dallas TX",
+      description: "<p>Dallas/Ft. Worth Alumni Association</p>\n<img class=\"text-center\" src=\"images/dallas.png\">"
     },
     "2": {
       lat: 29.526,
       lng: -95.746,
-      name: "Fort Bend Tx"
+      name: "Fort Bend Tx",
+      description: "<p>Fort Bend Alumni Association</p>\n<img class=\"text-center\" src=\"images/fort-bend.png\">"
     },
     "3": {
       lat: 29.788,
       lng: -95.823,
-      name: "Katy Tx"
+      name: "Katy Tx",
+      description: "<p>Katy Alumni Association</p>\n<img class=\"text-center\" src=\"images/katy.png\">"
     },
     "4": {
       lat: 29.414,
       lng: -94.931,
-      name: "Northside Tx"
+      name: "Northside Tx",
+      description: "<p>Northside Alumni Association</p>\n<img class=\"text-center\" src=\"images/northside.png\">"
     },
     "5": {
       lat: 26.378,
       lng: -98.815,
-      name: "Rio Grade Tx"
-    }
-  },
-  labels: {
-    "0": {
-      x: "932",
-      y: "183",
-      parent_id: "NH",
-      pill: "yes",
-      display: "all"
-    },
-    "1": {
-      x: "883",
-      y: "243",
-      parent_id: "VT",
-      pill: "yes",
-      display: "all"
-    },
-    "2": {
-      x: "932",
-      y: "273",
-      parent_id: "RI",
-      pill: "yes",
-      display: "all"
-    },
-    "3": {
-      x: "883",
-      y: "273",
-      parent_id: "NJ",
-      pill: "yes",
-      display: "all"
-    },
-    "4": {
-      x: "883",
-      y: "303",
-      parent_id: "DE",
-      pill: "yes",
-      display: "all"
-    },
-    "5": {
-      x: "932",
-      y: "303",
-      parent_id: "MD",
-      pill: "yes",
-      display: "all"
+      name: "Rio Grade Tx",
+      description: "<p>Rio Grande Alumni Association</p>\n<img class=\"text-center\" src=\"images/rio.png\">"
     },
     "6": {
-      x: "884",
-      y: "332",
-      parent_id: "DC",
-      pill: "yes",
-      display: "all"
+      lat: 38.89,
+      lng: -77.032,
+      name: "Washington D.C.",
+      description: "<p>Washington D.C. Alumni Association</p>"
     },
     "7": {
-      x: "932",
-      y: "213",
-      parent_id: "MA",
-      pill: "yes",
-      display: "all"
+      lat: 34.054,
+      lng: -118.245,
+      name: "Las Angeles CA",
+      description: "<p>SoCal Alumni Association</p>"
     },
     "8": {
-      x: "932",
-      y: "243",
-      parent_id: "CT",
-      pill: "yes",
-      display: "all"
+      lat: 39.74,
+      lng: -104.992,
+      name: "Denver CO",
+      description: "<p>Denver Alumni Association</p>"
     },
     "9": {
-      x: 305,
-      y: 565,
-      parent_id: "HI",
-      pill: "yes"
-    },
-    "10": {
-      x: "113",
-      y: "495",
-      parent_id: "AK"
-    },
-    "11": {
-      x: "773",
-      y: "510",
-      parent_id: "FL"
-    },
-    "12": {
-      x: "893",
-      y: "85",
-      parent_id: "ME"
-    },
-    "13": {
-      x: "815",
-      y: "158",
-      parent_id: "NY"
-    },
-    "14": {
-      x: "786",
-      y: "210",
-      parent_id: "PA"
-    },
-    "15": {
-      x: "790",
-      y: "282",
-      parent_id: "VA"
-    },
-    "16": {
-      x: "744",
-      y: "270",
-      parent_id: "WV"
-    },
-    "17": {
-      x: "700",
-      y: "240",
-      parent_id: "OH"
-    },
-    "18": {
-      x: "650",
-      y: "250",
-      parent_id: "IN"
-    },
-    "19": {
-      x: "600",
-      y: "250",
-      parent_id: "IL"
-    },
-    "20": {
-      x: "575",
-      y: "155",
-      parent_id: "WI"
-    },
-    "21": {
-      x: "784",
-      y: "326",
-      parent_id: "NC"
-    },
-    "22": {
-      x: "655",
-      y: "340",
-      parent_id: "TN"
-    },
-    "23": {
-      x: "548",
-      y: "368",
-      parent_id: "AR"
-    },
-    "24": {
-      x: "548",
-      y: "293",
-      parent_id: "MO"
-    },
-    "25": {
-      x: "718",
-      y: "405",
-      parent_id: "GA"
-    },
-    "26": {
-      x: "760",
-      y: "371",
-      parent_id: "SC"
-    },
-    "27": {
-      x: "680",
-      y: "300",
-      parent_id: "KY"
-    },
-    "28": {
-      x: "655",
-      y: "405",
-      parent_id: "AL"
-    },
-    "29": {
-      x: "550",
-      y: "435",
-      parent_id: "LA"
-    },
-    "30": {
-      x: "600",
-      y: "405",
-      parent_id: "MS"
-    },
-    "31": {
-      x: "525",
-      y: "210",
-      parent_id: "IA"
-    },
-    "32": {
-      x: "506",
-      y: "124",
-      parent_id: "MN"
-    },
-    "33": {
-      x: "460",
-      y: "360",
-      parent_id: "OK"
-    },
-    "34": {
-      x: "425",
-      y: "435",
-      parent_id: "TX"
-    },
-    "35": {
-      x: "305",
-      y: "365",
-      parent_id: "NM"
-    },
-    "36": {
-      x: "445",
-      y: "290",
-      parent_id: "KS"
-    },
-    "37": {
-      x: "420",
-      y: "225",
-      parent_id: "NE"
-    },
-    "38": {
-      x: "413",
-      y: "160",
-      parent_id: "SD"
-    },
-    "39": {
-      x: "416",
-      y: "96",
-      parent_id: "ND"
-    },
-    "40": {
-      x: "300",
-      y: "180",
-      parent_id: "WY"
-    },
-    "41": {
-      x: "280",
-      y: "95",
-      parent_id: "MT"
-    },
-    "42": {
-      x: "320",
-      y: "275",
-      parent_id: "CO"
-    },
-    "43": {
-      x: "223",
-      y: "260",
-      parent_id: "UT"
-    },
-    "44": {
-      x: "205",
-      y: "360",
-      parent_id: "AZ"
-    },
-    "45": {
-      x: "140",
-      y: "235",
-      parent_id: "NV"
-    },
-    "46": {
-      x: "100",
-      y: "120",
-      parent_id: "OR"
-    },
-    "47": {
-      x: "130",
-      y: "55",
-      parent_id: "WA"
-    },
-    "48": {
-      x: "200",
-      y: "150",
-      parent_id: "ID"
-    },
-    "49": {
-      x: "79",
-      y: "285",
-      parent_id: "CA"
-    },
-    "50": {
-      x: "663",
-      y: "185",
-      parent_id: "MI"
-    },
-    "51": {
-      x: "620",
-      y: "545",
-      parent_id: "PR"
-    },
-    "52": {
-      x: "550",
-      y: "540",
-      parent_id: "GU"
-    },
-    "53": {
-      x: "680",
-      y: "519",
-      parent_id: "VI"
-    },
-    "54": {
-      x: "570",
-      y: "575",
-      parent_id: "MP"
-    },
-    "55": {
-      x: "665",
-      y: "580",
-      parent_id: "AS"
+      lat: 40.715,
+      lng: -74.007,
+      name: "New York City, NY",
+      description: "<p>New York City Alumni Association</p>"
     }
   },
+  labels: {},
   legend: {
     entries: []
   },
