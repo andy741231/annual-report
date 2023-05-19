@@ -8,12 +8,12 @@
           }
 
           function navLeft() {
-            const container = document.querySelector(".section-container");
+            const container = document.querySelector(".section-container.current");
             container.scrollBy(-realSectionWidth, 0);
           }
 
           function navRight() {
-            const container = document.querySelector(".section-container");
+            const container = document.querySelector(".section-container.current");
             container.scrollBy(realSectionWidth, 0);
           }
 
@@ -195,8 +195,10 @@
 
           const clearDiv = (entries, observer) => {
             entries.forEach(entry => {
+              const addCurrent = entry.target
               if (entry.isIntersecting) {
-                
+                entry.target.classList.add("current")
+                console.log('engaged')
               } else {
                 upButton.classList.remove( 'd-none' )
                 downButton.classList.remove( 'd-none' )
@@ -210,6 +212,7 @@
 
                 upButton.classList.add( 'd-none' )
                 downButton.classList.add( 'd-none' )
+                entry.target.classList.remove("current")
                 console.log('clear')
               }
             });
@@ -217,12 +220,10 @@
 
          
               
-                
-
                
                 
           const allDiv = document.querySelectorAll( '.horizontal-section' )
-          const sectionCon = document.querySelector( '.section-container' )
+          const sectionCon = document.querySelectorAll( '.section-container' )
 
           // start scroll 
           const startHorScrollIO = new IntersectionObserver( horScrollStart, { threshold: 0.5 } )
@@ -249,4 +250,6 @@
              // clear  scroll 
              const clearIO = new IntersectionObserver( clearDiv, { threshold: 0.5 } )
           
-               clearIO.observe(sectionCon);
+               sectionCon.forEach(function(sectionCon) {
+                clearIO.observe(sectionCon);
+               })

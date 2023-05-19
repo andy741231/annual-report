@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+
+    <script type="text/javascript" src="mapdata.js"></script>		
+    <script  type="text/javascript" src="usmap.js"></script>
+
     <title>UA Annual Report 2023</title>
 </head>
     <body>
@@ -244,6 +248,24 @@
           </div>
           </div>
         </section>
+
+        <section class="bg-light">
+          <div class="row">
+            <div class="col-md-7 bg-life lazy" data-bg="images/board.jpg">
+              
+            </div>
+            <div class="col-md-5 p-5 d-flex align-items-center">
+              <div>
+              <div class="py-5" style="border-top: 3px dotted #333;"></div>
+              <h1 class="league text-uppercase">UH Alumni Association Foundation Board of Directors</h1>
+              <p class="crimson">
+                Service on the UH Alumni Association Foundation Board of Directors is on a volunteer basis and demonstrates the highest level of commitment from our alumni community. Members are ambassadors for the University of Houston and critical leaders in helping us carry out its mission of long-term alumni engagement. This distinguished group invest their time, passion and resources, and we thank them for their dedication and commitment.
+              </p>
+              <p class="crimson"><a href="https://houstonalumni.com/about-us/about-the-foundation/" target="_blank">Visit Alumni Association Foundation</a></p>
+            </div>
+            </div>
+          </div>
+        </section>
         
         <section class="bg-light">
           <div class="row">
@@ -444,12 +466,14 @@
           </div>
           </div>
         </section>
-        <section class="d-flex align-items-center bg-light">
+
+        <section class="d-flex align-items-center bg-light section-container">
+          <div class="horizontal-section bg-light start">
           <div class="row">
             <div class="col-md-4 p-5">
               <div class="text-center">
                 <div class="overlay-container">
-                <a href="#">
+                <a href="javascript:;" onclick="navRight()">
               <img class="img-hover img-fluid p-5 p-md-2 lazy" data-src="images/aa-1.png">
               <div class="img-overlay">
                 
@@ -466,7 +490,6 @@
               <h3 class="crimson fw-bold counter" style="font-size: 38px; color:#908B8B"><span style="color:#c8102e"> 11</span> Regional<br>
                 Networks</h3>
               </div>
-
             </div>
             <div class="d-flex py-5" style="width:0px;">
               <div class="d-none d-md-block" style="border-right: 3px dotted #333; width:0px; padding: 5rem 0px;"></div>
@@ -602,6 +625,19 @@
             </div>
 
           </div>
+          </div>
+          
+          <div class="horizontal-section bg-secondary end">
+            <div class="col-md-12 p-5 bg-cougar-yellow">
+              <p class="milo">Across the country, 
+                UH Alumni Association’s regional networks connect Cougars to the University 
+                and to each other. Through involvement, alumni build relationships with fellow alumni and participate in community service activities, philanthropy awareness
+                as well as countless networking opportunities.</p>
+            </div>
+            <div id="map">
+              <!--edit this map at https://simplemaps.com/custom/us/9ugEcbFp -->
+            </div>
+          </div>
         </section>
 
         <section class="bg-light">
@@ -693,16 +729,17 @@
             <div class="d-flex justify-content-between">
               <div class="text-center col-md-5">
                 <h1 class="league text-uppercase" style="font-size:50px; color:#707070">Recognizing:</h1>
-                <div class="text-center" style="height:200px; background:#c8102e; font-size:50px; margin-right:.3em;">
-                  <h1 class="p-5 text-uppercase text-light">67th Alumni<br> 
+                <div class="text-center" style="height:200px; background:#c8102e; font-size:50px;">
+                  <h1 class="p-5 text-uppercase text-light">68th Alumni<br> 
                     Awards GalA</h1>
                 </div>
+                <button onclick="navLeft()">left</button>
+                <button onclick="navRight()">right</button>
               </div>
               
               <div class="col-md-5">
-                <img class="img-fluid lazy" data-src="images/gala.png">
-                <p class="crimson">Each year, the UH Alumni Association honors alumni and friends of the University who embody the true spirit of UH
-                  and work to create impact through their unique contributions. On April 30, 2022, we celebrated and paid tribute to our deserving award honorees.</p>
+                <img class="img-fluid lazy" data-src="images/gala-new.jpg">
+                <p class="crimson">Each year, the UH Alumni Association honors alumni and friends of the University who embody the true spirit of UH and work to create impact through their unique contributions. On April 30, 2022, we celebrated and paid tribute to our deserving award honorees.</p>
               </div>
               <div class="col-md-2">
                 <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
@@ -712,89 +749,162 @@
             </div>
           </div>
 
+
           <div class="horizontal-section bg-light mid" style="z-index: 0;">
             
-            <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between">
 
+            <div class="col-md-1">
+              <div style="padding-top:150px;"></div>
+              <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+              <div style="height:200px; background:#c8102e;">
+              </div>
+            </div>
+
+            <div class="col-md-7 d-flex flex-wrap">
+
+              <div class="d-flex flex-row">
+                <div class="p-5" style="flex:1;">
+                  <p class="milo fw-bold text-uppercase" style="font-size:24px;">Distinguished Alumni Award</p>
+                  <p class="milo" style="font-size:24px;">This award recognizes alumni who have made significant contributions to society and whose accomplishments have brought credit to the University of Houston.</p>
+
+                  <div class="milo fw-bold row" style="font-size:24px;">
+                    <div class="col-md-4">
+                      <img class="img fluid p-1 lazy" data-src="images/david.png">
+                      <p>David Marss (’89)</p>
+                    </div>
+                    <div class="col-md-4">
+                      <img class="img fluid p-1 lazy" data-src="images/cook.png">
+                      <p>Judy (JD ’89) and Mark D.(’84)Cook</p>
+                    </div>
+                    <div class="col-md-4">
+                      <img class="img fluid p-1 lazy" data-src="images/dwight.png">
+                      <p>Dwight E. Davis(’00)</p>
+                    </div>
+                  </div>
+
+                  </div>
+                 
+                </div>
+
+                <div class="col-md-12 px-5">
+                  <div style="border-top: 3px dotted #c8102e;"></div>
+                </div>
+
+                <div class="d-flex flex-row">
+                    
+                    <div class="p-5" style="flex:1;">
+                      
+
+                      <div class="row">
+                        <p class="milo fw-bold text-uppercase" style="font-size:24px;">Distinguished Service Award</p>
+                        <div class="col-md-6">
+                          <img class="img-fluid p-1 lazy" data-src="images/blomstrom.png">
+                          <p class="milo fw-bold" style="font-size: 24px;">Ginger (’86) and David (’61) Blomstrom</p>
+                        </div>
+                        <div class="col-md-6">
+                         
+                          <p class="milo" style="font-size: 24px;">This award recognizes the exceptional loyalty and leadership of alumni volunteers and their efforts to further the goals and support the programs of the UH Alumni Association.</p>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+
+                
+
+            </div>
+            <div class="col-md-1">
+              <div style="padding-top:150px;"></div>
+              <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+              <div style="height:200px; background:#c8102e;">
+              </div>
+            </div>
+
+        </div>
+
+        
+      </div>
+
+      <div class="horizontal-section bg-light mid" style="z-index: 0;">
+            
+        <div class="d-flex justify-content-between">
+
+          <div class="col-md-1">
+            <div style="padding-top:150px;"></div>
+            <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+            <div style="height:200px; background:#c8102e;">
+            </div>
+          </div>
+
+          <div class="col-md-7 d-flex flex-wrap">
+
+            <div class="d-flex flex-row">
+              <div class="p-5" style="flex:1;">
+                <p class="milo fw-bold text-uppercase" style="font-size:24px;">Billie Schneider Outstanding Volunteer Award</p>
+
+                <div class="row" style="font-size:24px;">
+                  <div class="col-md-6">
+                    <img class="img-fluid p-1 lazy" data-src="images/michael.png">
+                    <p class="milo fw-bold">Michael Ramos(’00)</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="milo" style="font-size:24px;">This award recognizes alumni who exemplify a spirit of volunteerism to advance the mission of the UH Alumni Association and its programs. The recipient for this award is chosen by the UH Alumni Association.</p>
+                  </div>
+                  
+                </div>
+
+                </div>
+               
+              </div>
+
+              <div class="col-md-12 px-5">
+                <div style="border-top: 3px dotted #c8102e;"></div>
+              </div>
+
+              <div class="d-flex flex-row">
+                <div class="p-5" style="flex:1;">
+                  <p class="milo fw-bold text-uppercase" style="font-size:24px;">Rising Star for Achievement Award</p>
+  
+                  <div class="row" style="font-size:24px;">
+                    <div class="col-md-6">
+                      <img class="img-fluid p-1 lazy" data-src="images/armando.png">
+                      <p class="milo fw-bold">Armando Lucio Walle(’04, JD ’14)</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="milo" style="font-size:24px;">Recognizes motivated young alumni who have excelled beyond the norm and who exhibit leadership, involvement, and hold key volunteer positions on campus or within the UH Alumni Association.</p>
+                    </div>
+                    
+                  </div>
+                  <div class="col-md-12">
+                    <p class="milo">To view the list of past Alumni Award Honorees, <a href="https://houstonalumni.com/events/alumni-awards/" target="_blank">click here.</a></p>
+                  </div>
+  
+                  </div>
+                 
+                </div>
+
+              
+
+          </div>
+          <div class="col-md-1">
+            <div style="padding-top:150px;"></div>
+            <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+            <div style="height:200px; background:#c8102e;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+          <div class="horizontal-section bg-light end">
+            <div class="d-flex justify-content-between h-100">
+              
               <div class="col-md-1">
                 <div style="padding-top:150px;"></div>
                 <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
                 <div style="height:200px; background:#c8102e;">
                 </div>
               </div>
-
-              <div class="col-md-7 d-flex flex-wrap">
-
-                <div class="d-flex flex-row">
-                  <div class="p-5" style="flex:1;">
-                    <p class="milo fw-bold text-uppercase" style="font-size:24px;">Distinguished Alumni Award</p>
-                    <p class="milo" style="font-size:24px;">This award recognizes alumni who have made significant contributions to society and whose accomplishments have brought credit to the University of Houston.</p>
-
-                    <p class="milo fw-bold" style="font-size:24px;">Alois Blackwell (’78)<br>
-                      Karen Dufilho (’91)<br>
-                      Bonnie Dunbar (Ph.D. ’83)<br>
-                      Elizabeth Killinger (’91)<br>
-                      Dave Smalley (’79)<br>
-                      Steve Stephens (’80)<br>
-                      Brent Spiner (FS  ’71)
-                    </p>
-                    </div>
-                    <div class="h-100 py-5">
-                      <div class="h-100 py-5" style="border-right: 3px dotted #c8102e;"></div>
-                    </div>
-                    <div class="p-5" style="flex:1;">
-                      <p class="milo fw-bold text-uppercase" style="font-size:24px;">Distinguished Service Award</p>
-                      <p class="milo" style="font-size: 24px;">This award recognizes the exceptional loyalty and leadership of alumni volunteers and their efforts to further the goals and support the programs of the UH Alumni Association.</p>
-
-                      <p class="milo fw-bold" style="font-size: 24px;">Steve Goodman (’83, M.S. ’85)</p>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12 px-5">
-                    <div style="border-top: 3px dotted #c8102e;"></div>
-                  </div>
-  
-                  <div class="d-flex flex-row">
-                      <div class="p-5" style="flex:1;">
-                        <p class="milo fw-bold text-uppercase" style="font-size:24px;">Chair’s Award</p>
-                        <p class="milo" style="font-size:24px;">This award recognizes non-alumni who have consistently and voluntarily given extraordinary support to the University
-                          of Houston.</p>
-                        <p class="milo fw-bold" style="font-size:24px;">Leslie (‘93) and Philip (’94) Schulze</p>
-                      </div>
-                      <div class="h-100 py-5">
-                        <div class="h-100 py-5" style="border-right: 3px dotted #c8102e;"></div>
-                      </div>
-                      <div class="p-5" style="flex:1;">
-                        <p class="milo fw-bold text-uppercase" style="font-size:24px;">Distinguished Service Award</p>
-                        <p class="milo" style="font-size: 24px;">This award recognizes the exceptional loyalty and leadership of alumni volunteers and their efforts to further the goals and support the programs of the UH Alumni Association.</p>
-  
-                        <p class="milo fw-bold" style="font-size: 24px;">Garnet Coleman</p>
-                      </div>
-                    </div>
-
-                  
-
-              </div>
-                <div style="height: 90vh;" class="col-md-4 d-flex justify-content-between align-items-center" style="z-index: 0;">
-                  <div style="margin-right:-50px;">
-                    <img class="img-fluid lazy" data-src="images/gala-2.png">
-                  </div>
-                  <div style="z-index: -1;">
-                    <div class="" style="height:200px; width:150px; background:#c8102e;"></div>
-                  </div>
-              </div>
-
-          </div>
-        </div>
-          <div class="horizontal-section bg-light end">
-            <div class="d-flex justify-content-between h-100">
-              
-              <div style="height:90vh;" class="col-md-1 d-flex justify-content-between align-items-center">
-                <div>
-                  <div class="" style="height:200px; width:150px; background:#c8102e;"></div>
-                </div>
-                
-            </div>
               
               <div class="col-md-6">
                 <div class="p-5"><div style="height: 30px;"></div><img data-src="images/gala-banner.png" class="img-fluid lazy"></div>
@@ -1013,26 +1123,26 @@
           </div>
         </section>
 
-        <section style="background: #c8102e;" class="d-flex align-items-center">
-          <div class="row" style="min-height:100%;">
-            <div class="row bg-light">
-              <div class="d-flex justify-content-center col-md col-sm-12 p-5">
+        <section class="d-flex align-items-center bg-light">
+          <div class="row">
+            <div class="row d-flex justify-content-center h-100">
+              <div class="col-md col-sm-12 p-5">
                 <img class="img-fluid lazy party visually-hidden animate__delay-point5s" data-src="images/trad-5.png" alt="">
               </div>
-              <div class="d-flex justify-content-center col-md col-sm-12 p-5">
+              <div class="col-md col-sm-12 p-5">
                 <img class="img-fluid lazy party visually-hidden animate__delay-point6s" data-src="images/trad-4.png" alt="">
               </div>
-              <div class="d-flex justify-content-center col-md col-sm-12 p-5">
+              <div class="col-md col-sm-12 p-5">
                 <img class="img-fluid lazy party visually-hidden animate__delay-point7s" data-src="images/trad-3.png" alt="">
               </div>
-              <div class="d-flex justify-content-center col-md col-sm-12 p-5">
+              <div class="col-md col-sm-12 p-5">
                 <img class="img-fluid lazy party visually-hidden animate__delay-point8s" data-src="images/trad-2.png" alt="">
               </div>
-              <div class="d-flex justify-content-center col-md col-sm-12 p-5">
+              <div class="col-md col-sm-12 p-5">
                 <img class="img-fluid lazy party visually-hidden animate__delay-point9s" data-src="images/trad-1.png" alt="">
               </div>
             </div>
-            <div class="row" style="background-color: #c8102e;">
+            <div class="row p-5" style="background-color: #c8102e; min-height: 50%;">
               <div class="col-md-4">
                 <h1 class="league text-uppercase text-light text-end pe-5">Traditions</h1>
               </div>
@@ -1184,13 +1294,19 @@
                   <td>2,151</td>
                   <td>2,151</td>
                  </tr>
+                 <tr>
+                  <td><b>Total Assets</b></td>
+                  <td><b>$11,516,465</b></td>
+                  <td><b>$11,829,933</b></td>
+                 </tr>
               </table>
-
-              <div class="py-5">
-                <h3>LIABILITIES AND NET ASSETS</h3>
-              </div>
-
+              <br>
               <table class="table table-striped">
+                <tr>
+                  <th>LIABILITIES AND NET ASSETS</th>
+                  <th>2022</th>
+                  <th>2021</th>
+                </tr>
                 <tr>
                   <th>Liabilities</th>
                   <th></th>
@@ -1211,12 +1327,6 @@
                   <td>47,304</td>
                   <td>43,434</td>
                 </tr>
-                <tr>
-                  <td>Total liabilities</td>
-                  <td></td>
-                  <td></td>
-                 </tr>
-                <tr>
                   <th>Net Assets</th>
                   <th></th>
                   <th></th>
@@ -1311,6 +1421,7 @@
           
         <script src="https://www.uhadvancement.com/app/digital-library/stories/js/owl.carousel.js"></script>
         <script src="js/ini-animate.js"></script>
+        
         <script>
            var lazyLoadInstance = new LazyLoad({
             // Your custom settings go here

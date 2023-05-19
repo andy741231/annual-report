@@ -1,96 +1,216 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Section Navigation</title>
-    <style>
-      /* CSS for section container */
-      .section-container {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-      }
-      
-      /* CSS for individual sections */
-      .horizontal-section {
-        flex-shrink: 0;
-        width: 100vw;
-        height: 100vh;
-        scroll-snap-align: start;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      /* CSS for navigation buttons */
-      .horizontal-nav-button {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 50%;
-        font-size: 1.5em;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-      
-      .horizontal-nav-button:hover {
-        background-color: black;
-        color: white;
-      }
-      
-      .horizontal-nav-button.left {
-        left: 20px;
-        width:50px;
-      }
-      
-      .horizontal-nav-button.right {
-        right: 20px;
-        width: 50px;
-      }
-    </style>
-    <script type="text/javascript" src="mapdata.js"></script>		
-    <script  type="text/javascript" src="usmap.js"></script>
-  </head>
-  <body>
-    <div class="section-container">
-      <div id="map"></div>
-      <div class="section" style="background-color: #FFC0CB;">Section 1</div>
-      <div class="section" style="background-color: #FFFF00;">Section 2</div>
-      <div class="section" style="background-color: #00FF00;">Section 3</div>
-      <div class="section" style="background-color: #00FFFF;">Section 4</div>
-      <div class="section" style="background-color: #0000FF;">Section 5</div>
-      <div class="section" style="background-color: #FF00FF;">Section 6</div>
+<section class="section-container">
+
+          
+
+  <div class="horizontal-section bg-light start">
+    <div style="padding-top:150px;"></div>
+    <div class="d-flex justify-content-between">
+      <div class="text-center col-md-5">
+        <h1 class="league text-uppercase" style="font-size:50px; color:#707070">Recognizing:</h1>
+        <div class="text-center" style="height:200px; background:#c8102e; font-size:50px;">
+          <h1 class="p-5 text-uppercase text-light">68th Alumni<br> 
+          Awards GalA</h1>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <img class="img-fluid lazy" data-src="images/gala-new.jpg">
+        <p class="crimson">Each year, the UH Alumni Association honors alumni and friends of the University who embody the true spirit of UH and work to create impact through their unique contributions. On April 30, 2022, we celebrated and paid tribute to our deserving award honorees.</p>
+      </div>
+      <div class="col-md-2">
+        <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+        <div style="height:200px; background:#c8102e;"></div>
+      </div>
     </div>
-    <div class="nav-button left" onclick="scrollLeft()">&#8592;</div>
-    <div class="nav-button right" onclick="scrollRight()">&#8594;</div>
-    <script>
-      // JavaScript for section navigation
-      function scrollLeft() {
-        const container = document.querySelector(".section-container");
-        container.scrollBy(-window.innerWidth, 0);
-      }
+  </div>
+
+
+  <div class="horizontal-section bg-light mid" style="z-index: 0;">
+    
+  <div class="d-flex justify-content-between">
+
+    <div class="col-md-1">
+      <div style="padding-top:150px;"></div>
+        <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+        <div style="height:200px; background:#c8102e;">
+      </div>
+    </div>
+
+    <div class="col-md-7 d-flex flex-wrap">
+
+      <div class="d-flex flex-row">
+        <div class="p-5" style="flex:1;">
+          <p class="milo fw-bold text-uppercase" style="font-size:24px;">Distinguished Alumni Award</p>
+          <p class="milo" style="font-size:24px;">This award recognizes alumni who have made significant contributions to society and whose accomplishments have brought credit to the University of Houston.</p>
+
+          <div class="milo fw-bold row" style="font-size:24px;">
+            <div class="col-md-4">
+              <img class="img fluid p-1 lazy" data-src="images/david.png">
+              <p>David Marss (’89)</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img fluid p-1 lazy" data-src="images/cook.png">
+              <p>Judy (JD ’89) and Mark D.(’84)Cook</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img fluid p-1 lazy" data-src="images/dwight.png">
+              <p>Dwight E. Davis(’00)</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-12 px-5">
+      <div style="border-top: 3px dotted #c8102e;"></div>
+      </div>
+
+      <div class="d-flex flex-row">
+        <div class="p-5" style="flex:1;">
+          <div class="row">
+            <p class="milo fw-bold text-uppercase" style="font-size:24px;">Distinguished Service Award</p>
+            <div class="col-md-6">
+              <img class="img-fluid p-1 lazy" data-src="images/blomstrom.png">
+              <p class="milo fw-bold" style="font-size: 24px;">Ginger (’86) and David (’61) Blomstrom</p>
+            </div>
+            <div class="col-md-6">
+              <p class="milo" style="font-size: 24px;">This award recognizes the exceptional loyalty and leadership of alumni volunteers and their efforts to further the goals and support the programs of the UH Alumni Association.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1">
+      <div style="padding-top:150px;"></div>
+      <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+      <div style="height:200px; background:#c8102e;">
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+<div class="horizontal-section bg-light mid" style="z-index: 0;">
+    
+<div class="d-flex justify-content-between">
+
+  <div class="col-md-1">
+    <div style="padding-top:150px;"></div>
+    <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+    <div style="height:200px; background:#c8102e;">
+    </div>
+  </div>
+
+  <div class="col-md-7 d-flex flex-wrap">
+
+    <div class="d-flex flex-row">
+      <div class="p-5" style="flex:1;">
+        <p class="milo fw-bold text-uppercase" style="font-size:24px;">Billie Schneider Outstanding Volunteer Award</p>
+
+        <div class="row" style="font-size:24px;">
+          <div class="col-md-6">
+            <img class="img-fluid p-1 lazy" data-src="images/michael.png">
+            <p class="milo fw-bold">Michael Ramos(’00)</p>
+          </div>
+          <div class="col-md-6">
+            <p class="milo" style="font-size:24px;">This award recognizes alumni who exemplify a spirit of volunteerism to advance the mission of the UH Alumni Association and its programs. The recipient for this award is chosen by the UH Alumni Association.</p>
+          </div>
+          
+        </div>
+
+        </div>
+       
+      </div>
+
+      <div class="col-md-12 px-5">
+        <div style="border-top: 3px dotted #c8102e;"></div>
+      </div>
+
+      <div class="d-flex flex-row">
+        <div class="p-5" style="flex:1;">
+          <p class="milo fw-bold text-uppercase" style="font-size:24px;">Rising Star for Achievement Award</p>
+
+          <div class="row" style="font-size:24px;">
+            <div class="col-md-6">
+              <img class="img-fluid p-1 lazy" data-src="images/armando.png">
+              <p class="milo fw-bold">Armando Lucio Walle(’04, JD ’14)</p>
+            </div>
+            <div class="col-md-6">
+              <p class="milo" style="font-size:24px;">Recognizes motivated young alumni who have excelled beyond the norm and who exhibit leadership, involvement, and hold key volunteer positions on campus or within the UH Alumni Association.</p>
+            </div>
+            
+          </div>
+          <div class="col-md-12">
+            <p class="milo">To view the list of past Alumni Award Honorees, <a href="https://houstonalumni.com/events/alumni-awards/" target="_blank">click here.</a></p>
+          </div>
+
+          </div>
+         
+        </div>
+
       
-      function scrollRight() {
-        const container = document.querySelector(".section-container");
-        container.scrollBy(window.innerWidth, 0);
-      }
+
+  </div>
+  <div class="col-md-1">
+    <div style="padding-top:150px;"></div>
+    <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+    <div style="height:200px; background:#c8102e;">
+    </div>
+  </div>
+
+</div>
+</div>
+
+  <div class="horizontal-section bg-light end">
+    <div class="d-flex justify-content-between h-100">
       
-      document.addEventListener("keydown", (event) => {
-        if (event.keyCode === 37) {
-          scrollLeft();
-        } else if (event.keyCode === 39) {
-          scrollRight();
-        }
-      });
-    </script>
-  </body>
-</html>
+      <div class="col-md-1">
+        <div style="padding-top:150px;"></div>
+        <h1 class="league text-uppercase" style="padding-top:84px;"></h1>
+        <div style="height:200px; background:#c8102e;">
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="p-5"><div style="height: 30px;"></div><img data-src="images/gala-banner.png" class="img-fluid lazy"></div>
+        <div class="px-5"><div style="border-top: 3px dotted #c8102e;"></div></div>
+        <div class="p-5">
+        <p class="crimson">Each year, the UH Alumni Association pays tribute to the fastest growing Cougar-owned or operated businesses. On February 13, 2023, honorees were recognized at the 9th Annual Cougar 100 Luncheon held at the Bayou City Events Center. During the program, UH alumna, Natara Branch (’98), CEO of Houston Exponential discussed the importance of rising above our challenges to achieve greatness.</p>
+        <p><a  target="_blank" href="https://houstonalumni.com/events/cougar-100-awards-luncheon/">9th Annual Cougar 100 Honoree Listing.</a></p>
+        </div>
+      </div>
+      <div class="col-md-5 d-flex bg-dark flex-wrap h-100">
+        <img data-src="images/c1001.jpg" style="object-fit: cover;" class="lazy img-fluid">
+        <img data-src="images/c1002.png" style="object-fit: cover;" class="lazy img-fluid">
+        <img data-src="images/c1003.jpg" style="object-fit: cover;" class="lazy img-fluid">
+      </div>
+    </div>
+  </div>
+  
+  
+</section>
+
+<section class="bg-light">
+  <div class="row" style="min-height: 100%;">
+    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center" style="min-height:100%;">
+      <div class="p-5 h-50 d-flex justify-content-center">
+        <img class="h-100 lazy" data-src="images/cbn.png" alt="">
+      </div>
+      <div class="w-100 h-50">
+        <img class="h-100 w-100 lazy" data-src="images/cbn-2.png" alt="" style="object-fit: cover;">
+      </div>
+    </div>
+    <div class="col-md-6" style="background-color: #c8102e; min-height: 100%;">
+      <div class="p-5 d-flex align-items-center h-100">
+        <div>
+        <p class="crimson text-light">Cougar 100 members are automatically included in our Cougar Business Network. The Cougar Business Network is an online listing of all Cougar-owned or operated businesses, which helps promote Cougars doing business with Cougars. Last April, the UH Alumni Association hosted a reception for the Cougar Business Network where over 40 participants gathered to connect and exchange business information.</p>
+        <p class="crimson text-light">If you are a Cougar-owned or led business and would like to have your company listed on our alumni platform, <a href="https://coogsconnect.com/" target="_blank">CoogsConnect</a>, please join CoogsConnect, and you can control you own listing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
